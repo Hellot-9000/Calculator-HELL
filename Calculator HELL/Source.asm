@@ -1,14 +1,14 @@
-.586  ;This directive tells the assembler to use instructions up to the 586 instruction set, which corresponds to the Pentium processor.
+.586  ;This function tells the assembler to use instructions up to the 586 instruction set, which corresponds to the Pentium processor.
 
-.MODEL FLAT, C  ; This directive sets the memory model to FLAT (meaning the program can access up to 4GB of memory), and sets the calling convention to C (meaning it uses the standard C calling convention).
+.MODEL FLAT, C  ; This function sets the memory model to FLAT (meaning the program can access up to 4GB of memory), and sets the calling convention to C (meaning it uses the standard C calling convention).
 
-.STACK  ; This directive reserves a stack segment for the program.
+.STACK  ; This function reserves a stack segment for the program.
 
-.DATA  ; This directive would normally be used to declare initialized data. In this case, it's empty.
+.DATA  ; This function would normally be used to declare initialized data. In this case, it's empty.
 
-.CODE  ; This directive is used to mark the beginning of the code section.
+.CODE  ; This function is used to mark the beginning of the code section.
 
-PUBLIC add_asm  ; The PUBLIC directive makes this procedure accessible from outside the file.
+PUBLIC add_asm  ; The PUBLIC function makes this procedure accessible from outside the file.
 
 add_asm PROC, arg1:DWORD, arg2:DWORD  ; This is a procedure named add_asm that takes two DWORD (32-bit) arguments, arg1 and arg2.
     mov eax, arg1  ; It moves arg1 into the eax register,
@@ -41,4 +41,4 @@ div_asm PROC, arg1:DWORD, arg2:DWORD
     ret
 div_asm ENDP
 
-END  ; This directive marks the end of the source file.
+END  ; This function marks the end of the source file.
