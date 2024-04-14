@@ -29,19 +29,19 @@ int main() // this is where the program starts to run, this will open inside of 
     {
         printf("Subtraction result is %d\n", sub_asm(number1, number2)); // goes to the Source.asm program and ustilizes the sub_asm program
     }
-    else if (operand == '*')
+    else if (operand == '*') // checks for multiplication
     {
         printf("Multiplication result is %d\n", mul_asm(number1, number2));// goes to the Source.asm program and ustilizes the mul_asm program
     }
-    else if (operand == '/')
+    else if (operand == '/') //checks for division
     {
         printf("Division result is %d\n", div_asm(number1, number2));// goes to the Source.asm program and ustilizes the div_asm program
     }
-    else
+    else // incase the user doesnt know what to input it will throw this case
     {
-        printf("Invalid operand\n");
+        printf("Invalid operand\n"); // HA! invalid lol
     }
 
     
-    return 0;
+    return 0; // returns zero to end the program
 }
