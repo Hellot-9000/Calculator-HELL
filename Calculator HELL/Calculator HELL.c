@@ -11,7 +11,7 @@ int main()
 
     char operand;
     printf("\nPlease enter the operand: ");
-    scanf_s(" %c", &operand, 1); // Added space before %c to consume newline character
+    scanf_s(" %c", &operand, 1);
 
     int number1 = 0;
     int number2 = 0;
@@ -20,7 +20,7 @@ int main()
     printf("\nPlease enter the second number: ");
     scanf_s("%d", &number2);
 
-    // Call the assembly language routine and print the calculator result back to the console
+   
     if (operand == '+')
     {
         printf("Addition result is %d\n", add_asm(number1, number2));
@@ -42,6 +42,6 @@ int main()
         printf("Invalid operand\n");
     }
 
-    // Return all OK from this program
+    
     return 0;
 }
