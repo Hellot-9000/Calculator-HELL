@@ -19,8 +19,8 @@ int main() // this is where the program starts to run, this will open inside of 
     scanf_s("%d", &number1); // this is going to get the users input, the %d is c's way of wanting a number to be inputted, otherwise it will throw an error
     printf("\nPlease enter the second number: "); // asking for the users 2nd input
     scanf_s("%d", &number2); // scanning it for the 2nd number. 
-// you may have noticed that I have &function instead of just the function, this is to tell c that we want to change the value of this function to what is scanned
-   // here is the if and else if statements that check for each operand
+    // you may have noticed that I have &function instead of just the function, this is to tell c that we want to change the value of this function to what is scanned
+       // here is the if and else if statements that check for each operand
     if (operand == '+') //checks for plus
     {
         printf("Addition result is %d\n", add_asm(number1, number2)); // goes to the Source.asm program and utilizes the add_asm program
@@ -42,6 +42,6 @@ int main() // this is where the program starts to run, this will open inside of 
         printf("Invalid operand\n"); // HA! invalid lol
     }
 
-    
+
     return 0; // returns zero to end the program
 }
