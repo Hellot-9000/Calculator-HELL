@@ -23,18 +23,18 @@ The specific register used can vary depending on the system architecture, but it
 3. Returning to the Calling Program: After the assembly language routine has finished executing, it needs to return control to the calling C program. 
 This is typically done by popping the return address off the stack and jumping to that address. The `ret` instruction in assembly language handles this.
 
-4. Cleaning Up the Stack: Cleaning the Stack on the assembly side of the program is extremely important as the stack has the return address in the register. In most Assembly programs, you will see the func 'pop eax' or a register that needs its stack cleaned. 
+4. Cleaning Up the Stack: Cleaning the Stack on the assembly side of the program is extremely important as the stack has the return address in the register. In most Assembly programs, you will see the function 'pop eax' or a register that needs its stack cleaned. 
 This 'popping' of a register is necessary because the return address/the function that we need to access is below what we put on the stack. 
 This involves popping off the arguments that were passed to the assembly routine. If the C program is using the `cdecl` calling convention, it's responsible for 
 cleaning up the stack. If it's using the `stdcall` calling convention, the assembly routine is responsible for cleaning up the stack.
 
 -Summary-
 
-When programming in C and Assembly, which are both low-level programs, you can use both of them by referencing one another. Both C and asm work hand in hand with eachother with Windows, 
-in C, you can refer to almost any other programming language by using the 'extern' function, as refrenced in my C code on lines 3-6, you can see that Its looing for the asm functions of each one inside the file system. 
+When programming in C and Assembly, which are both low-level programs, you can use both of them by referencing one another. Both C and ASM work hand in hand with each other with Windows, 
+in C, you can refer to almost any other programming language by using the 'extern' function, as referenced in my C code on lines 3-6; you can see that it's looking for the asm functions of each one inside the file system. 
 The assembly program has PUBLIC functions for each one, making it readable from the C code and the program can look for it. 
 
-Refrences;
+References;
 
 StackOverflow.com https://stackoverflow.com/questions/13901261/calling-assembly-function-from-c
 https://stackoverflow.com/questions/8054362/mixing-c-and-assembly-files
